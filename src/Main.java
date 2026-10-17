@@ -6,12 +6,14 @@ public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     Menu.printWelcome();
+    Menu.dividingLine();
 
     boolean running = true;
 
     while (running) {
 
         Menu.printMenu();
+        Menu.dividingLine();
 
         if (scanner.hasNextInt()) {
             int choice = scanner.nextInt();
