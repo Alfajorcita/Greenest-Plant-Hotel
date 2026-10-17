@@ -44,7 +44,7 @@ public static void main(String[] args) {
                     break;
 
                 case 3:
-                    //System.out.println("Tack...");
+                    System.out.println("Programmet avslutas...");
                     running = false;
                     break;
 
@@ -61,66 +61,5 @@ public static void main(String[] args) {
 
     scanner.close();
 }
-
-
-
-/*import javax.swing.*;
-i
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-
-        PlantHotel hotel = new PlantHotel();
-        Scanner scanner = new Scanner(System.in);
-
-        boolean running = true;
-
-        while (running) {
-            System.out.println("----Välkommen till Växthotellet Greenest----");
-
-            System.out.println("Skriv vilken växt vill du ha info om: ");
-            System.out.println("Tillgängliga växter: " + " ");
-                    hotel.showPlants();
-
-            String input = scanner.nextLine();
-            Plants response = hotel.findByName(input);
-
-            if (response != null) {
-                System.out.println(response.getName());
-                System.out.println(response.calculateLiquid());
-                System.out.println(response.getLiquidType());
-
-            } else {
-                System.out.println("Vi har inte den här växten");
-            }
-            running = false;
-            scanner.close();
-
-
-            /*if (response.equalsIgnoreCase("Laura")) {
-                System.out.println("Plant: " + PalmLaura.getName());
-                System.out.println("Liquid amount: " + PalmLaura.calculateliquid());
-                System.out.println("Liquid type: " + laura.getLiquidType());
-
-            } else if (response.equalsIgnoreCase("Palm Olof")) {
-                System.out.println("Plant: " + PalmOlof.getName());
-            } else if (response.equalsIgnoreCase("Cactus Igge")) {
-                System.out.println("Plant: " + Cactus.getName());
-            } else if (response.equalsIgnoreCase("Meatloaf")) {
-                System.out.println("Plant: " + CarnivorousPlant.getName());
-            } else {
-                System.out.println("Vi har inte den här växten");
-
-            }
-
-            running = false;
-            scanner.close();
-
-        }
-    }*/
-
 
 

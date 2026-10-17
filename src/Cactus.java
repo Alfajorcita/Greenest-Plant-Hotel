@@ -1,8 +1,8 @@
 public class Cactus extends Plants {
     private static final double DAILY_WATER_AMOUNT_CACTUS = 0.02;
 
-    public Cactus(String name, double height, String plantType) {
-        super(name, height, plantType);
+    public Cactus(String name, double height) {
+        super(name, height);
     }
 
     public double calculateLiquid() {
@@ -14,4 +14,8 @@ public class Cactus extends Plants {
         return LiquidType.MINERAL_WATER;
     }
 
+    @Override
+    public PlantType getPlantType() {
+        return PlantType.CACTUS;
+    }
 }

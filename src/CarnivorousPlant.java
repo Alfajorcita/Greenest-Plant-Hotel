@@ -2,8 +2,8 @@ public class CarnivorousPlant extends Plants {
     private static final double DAILY_WATER_AMOUNT_CARNIVOROUS = 0.1;
     private static final double DOUBLE= 0.2;
 
-    public CarnivorousPlant(String name, double height, String plantType) {
-        super(name, height, plantType);
+    public CarnivorousPlant(String name, double height) {
+        super(name, height);
     }
 
     @Override
@@ -17,6 +17,10 @@ public class CarnivorousPlant extends Plants {
         return LiquidType.PROTEIN_DRINK;
     }
 
+    @Override
+    public PlantType getPlantType() {
+        return PlantType.CARNIVOROUS;
 
+    }
 }
 
