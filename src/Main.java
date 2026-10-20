@@ -5,63 +5,28 @@ public static void main(String[] args) {
     PlantHotel hotel = new PlantHotel();
     Scanner scanner = new Scanner(System.in);
 
-    Menu.printWelcome();
-    Menu.dividingLine();
+    ConsoleView.printWelcome();
+    ConsoleView.dividingLine();
 
-    boolean running = true;
+    while (true) {
 
-    while (running) {
+        System.out.print("Vilken växt vill du ha info om?: ");
+        String input = scanner.nextLine();
 
-        Menu.printMenu();
-        Menu.dividingLine();
+        // Polymorfism: Samma anrop, olika beteende.
+        Plant response = hotel.findByName(input);
 
-        if (scanner.hasNextInt()) {
-            int choice = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (choice) {
-
-                case 1:
-                    hotel.showPlants();
-                    Menu.dividingLine();
-                    break;
-
-                case 2:
-                    System.out.print("Vilken växt vill du ha info om?");
-
-                    String input = scanner.nextLine();
-                    Plants response = hotel.findByName(input);
-
-                    if (response == null) {
-                        System.out.println("Växten hittades inte.");
-                        break;
-                    } else {
-                        Menu.dividingLine();
-                        System.out.println("Hittad växt: " + response.getName());
-                        System.out.println("Växtart: " + response.getPlantType());
-                        System.out.println("Vätskebehovet: " + response.calculateLiquid() + " l");
-                        System.out.println("Vätska: " + response.getLiquidType());
-                        Menu.dividingLine();
-                    }
-                    break;
-
-                case 3:
-                    System.out.println("Programmet avslutas...");
-                    running = false;
-                    break;
-
-                default:
-                    System.out.println("Ogiltigt val. Välj 1, 2 eller 3.");
-                    break;
-            }
+        if (response == null) {
+            System.out.println("Växten hittades inte.");
 
         } else {
-            System.out.println("Ogiltig inmatning. Ange ett nummer.");
-            scanner.nextLine();
+            ConsoleView.dividingLine();
+            System.out.println("Hittad växt: " + response.getName());
+            System.out.println("Växtart: " + response.getPlantType());
+            System.out.println("Vätskebehovet: " + response.calculateLiquid() + " l");
+            System.out.println("Vätska: " + response.getLiquidType());
+            ConsoleView.dividingLine();
         }
     }
-
-    scanner.close();
 }
-
 

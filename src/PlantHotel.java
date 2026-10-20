@@ -3,31 +3,23 @@ import java.util.List;
 
 public class PlantHotel {
 
-    private List<Plants> plantList = new ArrayList<>();
+    private List<Plant> plantList = new ArrayList<>();
 
     public PlantHotel() {
+        //Polimorfysm. olika växter ärver från den abstrakta klassen Plants. Samma anrop, olika beteende.
         plantList.add(new Palm("Laura", 5));
         plantList.add(new Palm("Olof", 1));
-        plantList.add(new Cactus("Igge", 0));
+        plantList.add(new Cactus("Igge", 0.2));
         plantList.add(new CarnivorousPlant("Meatloaf", 0.7));
     }
 
-    public void showPlants() {
-        for (Plants plant : plantList) {
-            System.out.print(plant.getName() + " | ");
-        }
-        System.out.print("\n");
+    public Plant findByName(String name) {
 
-    }
-
-    public Plants findByName(String name) {
-
-        for (Plants plant : plantList) {
+        for (Plant plant : plantList) {
             if (plant.getName().equalsIgnoreCase(name.trim())) {
                 return plant;
             }
         }
-
         return null;
     }
 }
