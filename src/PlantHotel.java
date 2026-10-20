@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlantHotel {
-
+    //inkapsling
     private List<Plant> plantList = new ArrayList<>();
 
     public PlantHotel() {

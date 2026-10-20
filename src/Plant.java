@@ -1,7 +1,7 @@
 public abstract class Plant implements LiquidRequirement {
-
-    protected String name;
-    protected double height;
+    //inkapsling
+    private String name;
+    private double height;
 
     public Plant(String name, double height ) {
         this.name = name;
@@ -10,6 +10,10 @@ public abstract class Plant implements LiquidRequirement {
 
     public String getName() {
         return name;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public abstract LiquidType getLiquidType();

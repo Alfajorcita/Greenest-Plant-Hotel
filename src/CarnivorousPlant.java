@@ -1,4 +1,4 @@
-public class CarnivorousPlant extends Plant { // Arv: Carnivorous ärver egenskaper och metoder från Plant.
+public class CarnivorousPlant extends Plant { // Arv
     private static final double DAILY_WATER_AMOUNT_CARNIVOROUS = 0.1;
     private static final double LIQUID_PER_METER = 0.2;
 
@@ -8,7 +8,7 @@ public class CarnivorousPlant extends Plant { // Arv: Carnivorous ärver egenska
 
     @Override
     public double calculateLiquid() {
-        double liquidAmount = DAILY_WATER_AMOUNT_CARNIVOROUS + (LIQUID_PER_METER * height);
+        double liquidAmount = DAILY_WATER_AMOUNT_CARNIVOROUS + (LIQUID_PER_METER * getHeight());
         return liquidAmount;
     }
 

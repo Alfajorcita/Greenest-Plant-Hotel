@@ -1,4 +1,4 @@
-public class Cactus extends Plant { // Arv: Cactus ärver egenskaper och metoder från Plant.
+public class Cactus extends Plant { // Arv
     private static final double DAILY_WATER_AMOUNT_CACTUS = 0.02;
 
     public Cactus(String name, double height) {

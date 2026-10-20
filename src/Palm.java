@@ -1,4 +1,4 @@
-public class Palm extends Plant { // Arv: Palm 채rver egenskaper och metoder fr책n Plant.
+public class Palm extends Plant { // Arv: ex. Palm 채rver egenskaper och metoder fr책n Plant.
     private static final double DAILY_WATER_AMOUNT_PALM= 0.5;
 
     public Palm(String name, double height) {
@@ -7,7 +7,7 @@ public class Palm extends Plant { // Arv: Palm 채rver egenskaper och metoder fr�
 
     @Override
     public double calculateLiquid() {
-        return DAILY_WATER_AMOUNT_PALM * height;
+        return DAILY_WATER_AMOUNT_PALM * getHeight();
     }
 
     @Override
