@@ -1,4 +1,4 @@
-public class Palm extends Plant { // Arv: ex. Palm ärver egenskaper och metoder från Plant.
+public class Palm extends Plant { // Arv: ex. Palm ärver från Plant.
     private static final double DAILY_WATER_AMOUNT_PALM= 0.5;
 
     public Palm(String name, double height) {
